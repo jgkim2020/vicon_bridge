@@ -1,0 +1,18 @@
+<?xml version='1.0'?>
+<launch>
+	<node pkg="vicon_bridge" type="vicon_bridge" name="vicon" output="screen">
+		<param name="stream_mode" value="ClientPull" type="str" />
+		<param name="datastream_hostport" value="192.168.1.108:801" type="str" />
+		<!--remap from="vicon/Youngdong_LOAD/Youngdong_LOAD" to="syd/load_tf" /-->
+		<!--remap from="vicon/Youngdong_NUC_450/Youngdong_NUC_450" to="syd/multirotor_tf" /-->
+		<!--remap from="vicon/Youngdong_WAND/Youngdong_WAND" to="final/pose_temp" /-->
+		<remap from="vicon/boseong_multirotor/boseong_multirotor" to="vicon/vehicle_pose" />
+		</node>
+
+	<include file="$(find vicon_twist)/launch/vicon_twist.launch">
+		<arg name="node_name" value="vicon_twist"/>
+		<arg name="pose_topic" value="/vicon/vehicle_pose"/>
+		<arg name="odom_topic" value="/vicon/odometry"/>
+		<arg name="outputRaw_topic" value="/vicon/vehicle_twist_raw"/>
+	</include>
+</launch>
