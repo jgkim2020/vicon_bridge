@@ -5,7 +5,7 @@
 		<!--param name="datastream_hostport" value="192.168.1.108:801" type="str" /-->
 		<param name="datastream_hostport" value="192.168.1.108:801" type="str" />
 		<param name="tf_ref_frame_id" value="/world" type="str" />
-		<!--remap from="vicon/Youngdong_LOAD/Youngdong_LOAD" to="syd/load_tf" /-->
+		<remap from="vicon/pioneer/pioneer" to="/target_position" />
 		<!--remap from="vicon/Youngdong_NUC_450/Youngdong_NUC_450" to="syd/multirotor_tf" /-->
 		<!--remap from="vicon/Youngdong_WAND/Youngdong_WAND" to="final/pose_temp" /-->
 		<!--remap from="vicon/wand/wand" to="syd/multirotor_tf" /-->

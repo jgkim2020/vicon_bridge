@@ -6,7 +6,7 @@
 		<!--remap from="vicon/Youngdong_LOAD/Youngdong_LOAD" to="syd/load_tf" /-->
 		<!--remap from="vicon/Youngdong_NUC_450/Youngdong_NUC_450" to="syd/multirotor_tf" /-->
 		<!--remap from="vicon/Youngdong_WAND/Youngdong_WAND" to="final/pose_temp" /-->
-		<remap from="vicon/boseong_multirotor/boseong_multirotor" to="vicon/vehicle_pose" />
+		<remap from="vicon/youngdong_550/youngdong_550" to="/target/odom/"/>
 		</node>
 
 	<include file="$(find vicon_twist)/launch/vicon_twist.launch">
